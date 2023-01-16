@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope , conditionals , arrays ,objects , functions , (interactin using alert,confirm and prompt) , loops</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+            <li>item 6</li>
+
+        </ul>
+    </div>
+    <script>
+        var string1 = 'this is a string';
+        var string1 = 'this is string 2';
+        console.log('\n', string1);
+        let a = "u";
+        {
+            let a = "u6";
+            console.log('\n', a);
+        }
+        console.log('\n', a);
+        // #120 here 'let a="u6";' is just another way to declare variables.unlike var variables cannot be redeclared using let . in a block({ let a="u6";}) the let is used to assign local variables which is only applicable in the block. 
+
+        const b = "this cannot be changed";
+        console.log('\n', b);
+        // #121 this is generally used when we do not need to change the value of variables the whole time.
+
+        let age = 32;
+        if (age >= 18) {
+            console.log("\n you can drink alcohol");
+        }
+        else if (12 <= age < 18) {
+            console.log("\n you can drink cold-drink");
+        }
+        else {
+            console.log("\n you can drink water");
+        }
+        // #122 when the user puts wrong info in form (for ex there is no @ in email then the website can tell the user that @ is missing). we can do many more stuff like this using if else in js.
+
+        const cups = 45;
+        switch (cups) {
+            case 4:
+                console.log("\n value of cups is 4");
+                break;
+            case 41:
+                console.log("\n value of cups is 41");
+                break;
+            case 42:
+                console.log("\n value of cups is 42");
+                break;
+            case 43:
+                console.log("\n value of cups is 43");
+                break;
+
+            default:
+                console.log("\n value of cups is none of ,41,42,43");
+                break;
+        }
+        // #123 this is switch statement . if we dont use break it will run all the cases.
+
+        let var1=34;
+        let var2="string";
+        let var3=true;
+        let var4=null;
+        let var5=undefined;
+        // #124 different types of data-type.
+
+        let employee = {
+            name:"ankit",
+            salary:10000,
+            channel:"ankittalksnon-stop",
+            channel2:"killmenow"
+        }
+        console.log('\n',employee);
+        console.log('\n',employee.salary);
+        console.log('\n',employee['salary']);
+        // #125.1 object (here employee) stores key value pairs. here (employee.salary and employee['salary']) are same and is used to access the key values of the object employee.
+        
+
+        let names=["juhi",12,"ankit",undefined];
+        console.log('\n',names[2]);
+        // #125.2 this is array a type of object .
+
+        let names2=new Array("juhi",12,"ankit",undefined);
+        console.log('\n',names[0]);
+        // #125.3 this is another way to define arrays using new keyword in js.
+
+        console.log(names.length);
+         // #125.4 this gives us the length of the array or the number of elements in it.
+
+        names=names.sort();
+        console.log('\n',names)
+         // #125.5 this is used to sort the array in ascending order.
+
+         names.push("nisha");
+         console.log('\n',names);
+         // #125.6 this will push/ add the new element (here nisha) at the end of the array.
+
+         function greet(name,greetText="greetings from javascript"){
+            console.log(greetText+" "+name);
+            console.log(name+" is a good boy");
+         }
+         let greetText="good morning"
+         let name1='veer';
+         greet(name1,greetText);
+         let name2='ankit';
+         greet(name2,greetText);
+         let name3='sarvesh';
+         greet(name3);
+         // #126.1 here we made a function 'greet' which take the variable any variable and prints (name+" is a good boy"). this function can have multiple inputs (name,greetText). here (greetText="greetings from javascript") is the default value for greetText that means if we do not give any greetText value to greet function it will print the default text.
+         
+         function sum(a,b,c){
+            let d=a+b+c;
+            return d;
+         }
+         let returnvalue=sum(1,2,3);
+         console.log(returnvalue);
+         // #126.2 a fuction can return any type of value (string,int,bool). and anything after return statement will not be executed.
+
+         alert("warning!!!!!!");
+         // #127 this will pop a message box(modal window) everytime user opens the page.
+
+         let name=prompt("what is your name?","guest");
+         console.log(name);
+         // #128 using prompt we can take input from user and save it.
+
+         let deletepost = confirm("do you really want to delete this post?");
+         console.log(deletepost);
+         // #129 confirm asks a question to user and returns true or false based on the answer.
+         if(deletepost){
+            console.log("your post has been deleted successfully");
+         }
+         else{
+            console.log("your post has not been deleted");
+         }
+
+         for(let i=0;i<3;i++){
+            console.log(i);
+         }
+         let friends=["pooja","deepti","rohan","ankit","nisha"];
+         for (let i = 0; i < friends.length; i++) {
+            console.log("hello friend, "+friends[i]); 
+         }
+         // #130 for loop to iterate a array.
+
+         friends.forEach(function (element) {
+            console.log("hello friend, "+element+" to modern js");
+         })
+         // #131 forEach is a function which perform a task for all elements in the array friends. 
+
+         for (element of friends){
+            console.log("hello friend, "+element+" to mordern js again.");
+         }
+         // #132 this for of loop is even better than forEach function .
+
+         let workers = {
+            name: "ankit",
+            salary: 100000,
+            college: "rknec"
+         }
+         for(key in workers){
+            console.log(`the ${key} of employee is ${workers[key]}`);
+         }
+         // #133 using this we can itterate objects in java script.
+
+         let i=0;
+         while(i<4){
+            console.log(`${i} is less than 4 `)
+            i++;
+         }
+         // #134 while loop and do while loop. 
+          
+
+    </script>
+
+</body>
+
+</html>

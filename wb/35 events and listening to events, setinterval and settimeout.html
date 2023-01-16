@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events and listening to events , setinterval and settimeout</title>
+    <style>
+        #btn{
+            padding: 10px 20px;
+            color: aliceblue;
+            background-color: blue;
+            border: 3px solid black;
+            font-weight: bold;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- #138 browser events:
+   click
+   contextmenu
+   mouseover/mouseout
+   mousedown/mouseup
+   mousemove
+   submit
+   focus
+   DOMcontentloaded
+   transitioned
+
+-->
+<div class="container" >
+    <h1>heading</h1>
+    <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, ex? Quibusdam sint debitis nisi? Reprehenderit iure voluptatibus odit harum sint, dolorum ab qui nesciunt quod nisi accusamus aliquid nemo eos quaerat provident autem assumenda libero recusandae nostrum ex. Et tempore expedita voluptas, quos quia fugit odit animi atque quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi voluptates voluptatibus molestias quo fugit incidunt labore? Autem vitae vero et in magnam exercitationem tempora corporis, deserunt, non ratione quidem dicta totam, excepturi sint dolorum. Maxime eveniet quis dolore commodi, consectetur repellat tenetur consequatur illo possimus reprehenderit molestias corrupti ad praesentium? </p>
+</div>
+<button id="btn" onclick="togglehide()">show/hide</button>
+<din class="container2">
+    
+    <div> this is a container </div>
+    <div>
+        <span id="time">time now is </span>
+    </div>
+</din>
+<script>
+    function togglehide(){
+        let btn=document.getElementById('btn');
+        let para=document.getElementById('para');
+        if(  para.style.display!='none'){
+            para.style.display='none';
+        }
+        else{
+            para.style.display='block';
+        }
+    }
+    // #138.2 if we write any event after on(here click) , the function(here togglehide()) will run on applying that event.
+
+    let para=document.getElementById('para');
+    para.addEventListener('mouseover',function run(){
+      console.log('mouse inside');  
+    })
+   
+    para.addEventListener('mouseout',function run(){
+      console.log('mouse now went outside') ; 
+    })
+    // #138.3 this function tel the user if a particular event has occured.( let para=document.getElementById('para');) here we do not need to define a variable to store an id , coz ids are itself variables which we can use in js.
+
+    function greet(name){
+        console.log("\nhello, good morning "+name);
+    }
+    setTimeout(greet,5000,"ankit");
+    // #139.1 setTimeout allows you to set time for an event to occur, here the time(5000) is in milliseconds. also we cannot callout function (here greet()) in setTimeout.
+
+    timeOut = setTimeout(greet, 5000, "ankit");
+    console.log('\n',timeOut);
+    clearTimeout(timeOut);
+    // #139.2 here timeOut will give a unique id for the setTimeout , using that id we can clear the setTimeout using clearTimeout.
+
+    setInterval(greet,5000000,"ankit");
+    // #139.3 this will keep repeating the greet function in a interval of 5000 milli-seconds.
+
+    intervalId = setInterval(greet, 5000000,"ankit");
+    console.log(intervalId);
+    clearInterval(intervalId);
+    // #139.4 this will give a unique id fir setInterval which can be used to clear the interval.
+
+    function displaytime(){
+        time=new Date();
+        console.log(time);
+        document.getElementById('time').innerHTML=time;
+    }
+    setInterval(displaytime,1000);
+    // #139.5 this is how we make a clock for the website.
+    
+
+  
+
+
+
+
+
+</script>
+
+  
+
+</body>
+</html>

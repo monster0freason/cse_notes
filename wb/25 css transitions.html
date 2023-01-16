@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transitions</title>
+    <style>
+        body{
+            background-color: black;
+            color: black;
+            transition-property: background-color;
+        }
+        body:hover{
+            background-color: white;
+        }
+        .container{
+           
+        }
+        #box1{
+            display: flex;
+            width: 200px;
+            height: 200px;
+            margin: 8px 0px;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+            transition-property: background-color;
+            transition-duration: 3s;
+            transition-delay: 0s;
+            transition-timing-function: ease-in;
+            transition: background-color 3s ease-in 0s;
+            /* #101.1 shorthand property combines four of the transtuin properties(property,duration,timing function,delay) into a single property. */
+
+        }
+        #box1:hover{
+            background-color: aqua;
+        }
+        #box2{
+            display: flex;
+            width: 200px;
+            height: 200px;
+            margin: 8px 0px;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+            transition: all 3s ease-in 0s;
+            /* #101.2 using (all) we can apply transtions to most os the things simulteneously */
+        }
+        #box2:hover{
+            background-color: aqua;
+            height: 400px;
+            width: 400px;
+            border-radius: 100;
+            background-color: blue;
+            font-size: 40px;
+            color: white;
+            background-color: black;
+
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div id="box1">
+        this is my box.
+    </div>
+    <div id="box2">
+        this is my box 2.
+    </div>
+   </div> 
+</body>
+</html>

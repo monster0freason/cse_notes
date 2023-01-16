@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute and nth child pseudo selectors</title>
+    <style>
+        .container{
+            display: block;
+            margin: auto;
+            width: 233px;
+        }
+        input{
+            display: block;
+            margin: 5px;
+        }
+        input[type='text']{
+            background-color: aqua;
+
+        }
+        a[target]{
+            font-size: 30px;
+            color: aquamarine;
+            margin: auto;
+        }
+        a[target]:hover{
+            color: blue;
+        }
+        a[target='_self']{
+            color:aqua;
+            font-size: 30px;
+            /* #91 ( a[target='_self'], a[target], input[type='text']) these are target specific pseudo selectors. */
+        }
+        li:nth-child(2){
+            color: red;
+            /* #92 it will target the 2nd child of the parent of li(ul) */
+        }
+        li:nth-child(2n-1){
+            color:chartreuse;
+            /* #93 it will target all the odd children of the parent of li(ul) */
+        }
+        li:nth-child(even){
+            background-color: bisque;
+            /* #94 it will target all the even children of the parent of li(ul) */
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action=""class="form-control">
+            <h1><a href="http://google.com" target="_blank"> go to google</a> </h1>
+            <h1><a href="http://facebook.com" target="_self"> go to facebook</a> </h1>
+            <input type="text" placeholder="enter your name">
+            <input type="text" placeholder="enter your password">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="item1">item 1</li>
+            <li class="item" id="item2">item 2</li>
+            <li class="item" id="item3">item 3</li>
+            <li class="item" id="item4">item 4</li>
+            <li class="item" id="item5">item 5</li>
+        </ul>
+    </div>
+</body>
+</html>

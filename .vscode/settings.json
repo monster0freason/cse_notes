@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "ostream": "cpp"
+    },
+    "java.project.sourcePaths": [
+        "com.java",
+        "java"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}

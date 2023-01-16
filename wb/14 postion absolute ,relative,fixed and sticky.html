@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postion absolute ,relative,fixed and sticky</title>
+    <style>
+        .container {
+            border: 4px solid grey;
+            background-color: aqua;
+            height: 3000px;
+        }
+
+        .box {
+            border: 4px solid black;
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+
+        }
+
+        #box3 {
+            position: fixed;
+            top: 10px;
+            left: 1050px;
+        }
+
+        #box2 {
+            position: sticky;
+            top: 10px;
+            /* #68 with 'postion' we can change the postion of boxes. different types of postion:
+                1. static(by default) 
+                2. relative (changes wrt its original postion) 
+                3. absolute (takes the parent tag as the origin and moves according to it) 
+                4. fixed (fixes the box at a particular postion) 
+                5. sticky (sticks the box at a particular position) */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+
+</html>

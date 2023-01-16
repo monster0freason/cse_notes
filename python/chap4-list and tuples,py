@@ -1,0 +1,41 @@
+a=[1,2,3,56,6,False,'ankit']
+#17 LISTS --> create list using []. items can be of different types.
+ 
+a[0]=98 #18 can change the items of list
+print(a)
+
+friends=['ronaldo','tony','potter',69,'don',True]
+#19 slicing in lists
+print(friends[0:4])
+
+#20 list methods
+l1=[34,21,88,73,12,1,222,1000]
+print(l1)
+l1.sort() #sorting
+print(l1)
+l1.reverse() #reversing
+print(l1)
+l1.append(45) #adds to the end of list
+print(l1)
+l1.insert(0,544) # 544 will be added at index 0.
+print(l1)
+l1.pop(4) #will remove item at index 4
+print(l1)
+l1.remove(1000) # will remove 1000 from the list
+print(l1)
+
+#21 TUPLE(crearting a tuple using ()) 
+t=(1,2,6,10,77)
+print(t[0])
+
+#22 we cannot update the values of tuple(0)=11 --> will throw an error
+# t1=()  empty tuple
+# t1=(1,) tuple with single element
+
+#23 tuple methods
+t=(1,2,1,6,8,1,9,9,5,1,1,34)
+print(t.count(1))
+print(t.index(9))
+
+
+

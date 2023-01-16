@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display property</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header {
+            margin: auto;
+            border: 4px solid blue;
+
+            width: 1200px;
+        }
+
+        img {
+            width: 33px;
+            margin: auto;
+            display: block;
+            /* #66 two types of elemwnts are there-inline and block this 'display'feature lets you change one into other(inline->block and block->inline) */
+        }
+
+        h3 {
+            margin: 0px;
+            text-align: center;
+        }
+        .box{
+            border: 4px solid black;
+            background-color: aqua;
+            padding: 20px;
+            margin-top: 2px;
+            display: inline-block;
+            /* #67 you cannot change the width and height of a block element but this ' display: inline-block;' lets you do that */
+            width: 33%;
+        }
+        .container{
+            margin: auto;
+            width: 1200px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <img src="https://lh3.googleusercontent.com/a-/AFdZucre9Uwx2BUJKcPJEaF1_j3f6Y1reiy0Gv-8xaPM=s432-p-rw-no"
+            alt="">
+        <h3>welcome to my blog</h3>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">
+                heading
+            </h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non rem facilis architecto laudantium vero
+            laboriosam eum nobis inventore, earum in? Quia molestiae dolorum provident dolorem magni assumenda doloribus
+            molestias? Accusantium magnam quibusdam harum corporis rerum delectus dolore eum voluptate assumenda.
+        </div>
+        <div class="box">
+            <h4 class="heading">
+                heading
+            </h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non rem facilis architecto laudantium vero
+            laboriosam eum nobis inventore, earum in? Quia molestiae dolorum provident dolorem magni assumenda doloribus
+            molestias? Accusantium magnam quibusdam harum corporis rerum delectus dolore eum voluptate assumenda.
+        </div>
+        <div class="box">
+            <h4 class="heading">
+                heading
+            </h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non rem facilis architecto laudantium vero
+            laboriosam eum nobis inventore, earum in? Quia molestiae dolorum provident dolorem magni assumenda doloribus
+            molestias? Accusantium magnam quibusdam harum corporis rerum delectus dolore eum voluptate assumenda.
+        </div>
+    </div>
+</body>
+
+</html>

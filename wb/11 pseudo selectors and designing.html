@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo selectors and designing</title>
+    <style>
+        .container{
+            border: 4px solid black;
+            background-color: bisque;
+            padding: 10px;
+            margin: 10px;
+            width: 666px;
+        }
+        a{
+            text-decoration: none;
+            /* #59 using this i can remove underline from hyperlink */
+        }
+        a:hover{
+            color: blue;
+            /* #60 the color of text will change to blue if i hover on it */
+            background-color: aliceblue;
+             /* #61 the background color will change to aliceblue if i hover on it */
+        }
+        a:visited{
+            background-color: grey;
+        }
+        a:active{
+            background-color: rebeccapurple;
+        }
+        /* #62 a:hover,a:visited,a:active these are pseudo selectors  */
+
+        .btn{
+            background-color: aqua;
+            padding: 8px;
+            border: none;
+            box-sizing: border-box;
+            cursor: pointer;
+            /* #58 whenever you take your cursor to an element with .btn class , the cursor will change into pointer. */
+            font-size: 12px;
+            border-radius: 4px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="count1">
+        <h3>heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis rerum quae blanditiis libero consequuntur quibusdam beatae. Aspernatur sequi beatae, laboriosam dignissimos ipsum impedit soluta, error facere possimus vitae a minus placeat perspiciatis architecto.</p>
+        <a href="https://google.com" class="btn">read more</a>
+        <button class="btn">contact us</button>
+        <!-- #57 button tag used to make a button like structure in the page -->
+    </div>
+</body>
+</html>

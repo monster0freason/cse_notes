@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and time</title>
+    <style>
+        .container{
+            background-color: black;
+            border: 4px solid aqua;
+            margin: 4px;
+            padding: 34px;
+            text-align: center;
+            color: aliceblue;
+        }
+        #time{
+            font-weight: bolder;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+   current time is <span id="time"></span>
+   </div> 
+   <script>
+    console.log('this is date and time tutorial');
+    let now = new Date();
+    console.log(now);
+
+    let date = new Date(0);
+    console.log(date);
+    // #140.1 this will give the reference time that is ("1970-01-01T00:00:00.000Z") . as you increase the number from zero the time increases in milliseconds.
+
+    let newdate = new Date("2029-09-30");
+    console.log(newdate);
+    let newdate1 = new Date(3020,0,6,9,3,2,34);
+    console.log(newdate1);
+    // #140.2 another wat to represent date: let newdate1 = new Date(year,month,date,hours,minutes,seconds,milliseconds);
+
+    let year=newdate1.getFullYear();
+    console.log("the year is",year);
+
+    
+    let dt=newdate1.getDate();
+    console.log("the year is",dt);
+
+    
+    let month=newdate1.getMonth();
+    console.log("the year is",month);
+
+    
+    let hours=newdate1.getHours();
+    console.log("the year is",hours);
+     // #140.3 we can get any component of date from a variable using these functions.
+
+     newdate1.setDate(2);
+     console.log(newdate1);
+
+     newdate1.setMonth(2);
+     console.log(newdate1);
+
+     newdate1.setFullYear(2);
+     console.log(newdate1);
+
+     newdate1.setHours(2);
+     console.log(newdate1);
+     // #140.4 we can change any component of date from a variable using these functions.
+
+     console.log( Date.now());
+     // #140.5 this will dive the time stamp , that is no. of milli-seconds that have passed from the reference date.
+
+     setInterval(updatetime,1000);
+     function updatetime(){
+        time.innerHTML = new Date();
+     }
+
+   </script>
+</body>
+</html>
