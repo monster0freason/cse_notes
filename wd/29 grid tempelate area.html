@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid tem</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+            /* #106 here we can make matrix of boxes using grid template area */
+            padding: 8px 8px;
+        }
+          .item{
+           
+           background-color: red;
+           border: 3px solid black;
+           margin: 4px;
+           padding: 16px 8px;
+          
+       }
+       #navbar{
+        grid-area:navbar ;
+       }
+       #section{
+        grid-area: section;
+       }
+       #aside{
+        grid-area: aside;
+       }
+       #footer{
+        grid-area: footer;
+       }
+       /* #107 we canuse @media with grid to make our website more responsive */
+       @media only screen and (max-width:300px){
+        .item{
+            background-color: yellow;
+           
+        }
+        .container{
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer';
+        }
+       }
+       @media only screen and (min-width:300px) and (max-width:500px){
+        .item{
+            background-color:black  ;
+            color: aliceblue;
+          
+        }
+        .container{
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer';
+        }
+       }
+       @media only screen and (min-width:500px) and (max-width:800px){
+        .item{
+            background-color: blue;
+            color: aliceblue;
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="navbar">navbar </div>
+    <div class="item" id="section">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam corrupti minima porro voluptate recusandae, assumenda itaque expedita iste provident, ut sunt a hic, impedit ratione iusto quod enim et adipisci perferendis. Dolorem placeat quia quo inventore iste eveniet modi veniam similique doloremque maxime ipsam eos quae dolores quibusdam assumenda laborum, molestiae aut eaque asperiores quasi recusandae earum porro! Officia quisquam fuga consequatur eveniet quo repellat! Id, amet. Aliquid nam quis, eos eaque mollitia explicabo dolorem culpa omnis in nulla quae impedit labore facilis voluptatum consectetur, a ipsum illo assumenda reprehenderit! Eligendi dolores nostrum ut illo, voluptatibus nesciunt mollitia obcaecati facilis doloribus aut perferendis, odio aliquam eos est consequuntur! Eveniet inventore, aliquam voluptatum, porro illum nihil perspiciatis vel pariatur provident dolore ratione laborum? Fuga nesciunt consequuntur repellat commodi deleniti recusandae doloremque nisi numquam quisquam iste sed incidunt possimus quasi ex, similique quaerat suscipit velit magni quia dolor. Iure, debitis saepe harum tempora ducimus modi eius explicabo quae ex esse commodi! Id, at minima nam est, eligendi explicabo consequuntur impedit repellendus, dolorum quas repellat esse. Recusandae est, maxime voluptatem earum atque dolorum voluptas quae ratione fugit adipisci. Vero repudiandae tempore voluptatem, reprehenderit ab odit impedit facilis, at blanditiis dolorem consequatur quis consectetur cum? Perspiciatis reprehenderit ad quia odio sunt. Eveniet, asperiores accusamus voluptatem voluptates facere hic a alias, ex quo modi beatae. Esse tenetur beatae eligendi rerum, quis sequi doloribus qui quas inventore enim aspernatur velit blanditiis quod, hic sint odio maiores? Delectus porro corrupti obcaecati quisquam quae quidem facere odit. Earum.</div>
+    <div class="item" id="aside">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam corrupti minima porro voluptate recusandae, assumenda itaque expedita iste provident, ut sunt a hic, impedit ratione iusto quod enim et adipisci perferendis. Dolorem placeat quia quo inventore iste eveniet modi veniam similique doloremque maxime ipsam eos quae dolores quibusdam assumenda laborum, molestiae aut eaque asperiores quasi recusandae earum porro! Officia quisquam fuga consequatur eveniet quo repellat! Id, amet. Aliquid nam quis, eos eaque mollitia explicabo dolorem culpa omnis in nulla quae impedit labore facilis voluptatum consectetur, a ipsum illo assumenda reprehenderit! Eligendi dolores nostrum ut illo, voluptatibus nesciunt mollitia obcaecati facilis doloribus aut perferendis, odio aliquam eos est consequuntur! Eveniet inventore, aliquam voluptatum, porro illum nihil perspiciatis vel pariatur provident dolore ratione laborum? Fuga nesciunt consequuntur repellat commodi deleniti recusandae doloremque nisi numquam quisquam iste sed incidunt possimus quasi ex, similique quaerat suscipit velit magni quia dolor. Iure, debitis saepe harum tempora ducimus modi eius explicabo quae ex esse commodi! Id, at minima nam est, eligendi explicabo consequuntur impedit repellendus, dolorum quas repellat esse. Recusandae est, maxime voluptatem earum atque dolorum voluptas quae ratione fugit adipisci. Vero repudiandae tempore voluptatem, reprehenderit ab odit impedit facilis, at blanditiis dolorem consequatur quis consectetur cum? Perspiciatis reprehenderit ad quia odio sunt. Eveniet, asperiores accusamus voluptatem voluptates facere hic a alias, ex quo modi beatae. Esse tenetur beatae eligendi rerum, quis sequi doloribus qui quas inventore enim aspernatur velit blanditiis quod, hic sint odio maiores? Delectus porro corrupti obcaecati quisquam quae quidem facere odit. Earum.</div>
+    <div class="item" id="footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus reprehenderit cumque enim. Non fugiat in ipsa ab similique? Hic rem eligendi, obcaecati quibusdam, accusamus enim vitae aspernatur aliquam dolorem consequatur ea ex tempora! Consequuntur repudiandae eos officiis id optio corrupti!</div>
+    </div>
+</body>
+</html>

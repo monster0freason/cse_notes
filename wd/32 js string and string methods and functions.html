@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string and string methods and functions</title>
+</head>
+<body>
+   <div class="container">
+    <div id="content"></div>
+    <h1>Lorem ipsum dolor sit.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis architecto velit optio? Doloribus sapiente temporibus, laudantium perferendis architecto labore minima odit omnis. Quam ea earum minima optio enim dolores sunt.</p>
+   </div> 
+   <script>
+    var first='my';
+    // #113 both single and double quotes can be used to make a variable . if we wanna use single quote in the string then we use double and vice versa.
+    var second='name';
+    var third='is';
+    var forth='ankit';
+    var temp=`${forth}  ${third} a nice person , ${first} daughter likes him`;
+    //1 #114 ${}-> these are like fill in the blanks and is used to make templates in js. these are used inside 2 backticks (``) 
+    console.log(`\n ${temp}`);
+
+    var len=forth.length;
+    console.log(`\n length of ankit is ${len}`);
+    // #115 ( var len=forth.length;) -> is used to find the length of the variable (forth)
+
+    // #116 \n is one of escape sequence character called (new line character.) if i wanna print \n in the string then i can do it by using (\\n)
+
+    var y = new String("this");
+    console.log(y);
+    // #117 this is another way to take a string called -> string constructer.
+
+    document.getElementById('content').innerHTML = '<h3>ankit is a fool</h3>';
+    // #118 this is used to put things on the web page.
+
+    var fdays='this is a string';
+    console.log('\n' ,fdays);
+    var position= fdays.indexOf('is');
+    console.log(position);
+    // #119.1 this (fdays.indexOf('is');) finds the first occurence of the substring ('is') in the string (fdays)
+
+    position= fdays.lastIndexOf('is');
+    console.log(position);
+     // #119.2 this (fdays.lastIndexOf('is');) finds the first occurence of the substring ('is') in the string (fdays)
+
+     var substr=fdays.slice(1,9);
+    console.log('\n',substr);
+    // #119.3 this (fdays.slice(1,9);) will print the sub-string from index 1 to index 8.
+
+    var substr=fdays.substring(1,9);
+    console.log('\n',substr);
+    // #119.4 both slice and substring function do the same thing only difference is slice can also take negetive value but substring cannot.
+
+    var replaced=fdays.replace('string','ankit');
+    console.log('\n',fdays);
+    console.log('\n',replaced);
+    // #119.5 here it will replace the word string with the word ankit in the string fdays .
+
+    console.log(fdays.toLowerCase());
+    console.log(fdays.toUpperCase());
+    // #119.6 this function will change all the albhabets to upper case.
+
+    var newstring=fdays.concat('/sentence');
+    console.log(newstring);
+    // #119.7 the function can concat a new string to fdays.
+
+    var withwhitespaces='     this contains      whitespaces     ';
+    console.log('\n',withwhitespaces);
+    console.log('\n',withwhitespaces.trim());
+    // #119.8 this will remove extra spaces from the start and end.
+
+    var char=fdays.charAt(3);
+    console.log(char);
+    // #119.9 this will give the character at the index 3.
+
+    var char=fdays.charCodeAt(3);
+    console.log(char);
+     // #119.10 this will give the utf16 character code at the index 3.
+
+     console.log(fdays[8]);
+     // #119.11 this is like a array and will print any index.
+
+
+   </script>
+</body>
+</html>

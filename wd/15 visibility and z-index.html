@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility and z-index</title>
+    <style>
+        .box {
+            border: 4px solid black;
+            margin: 10px;
+            width: 170px;
+            height: 170px;
+        }
+
+        #box1 {
+            background-color: green;
+            position: relative;
+            top: 49px;
+            left: 30px;
+            
+            z-index:-2 ;
+        }
+
+        #box2 {
+            background-color: red;
+            /* display: none; */
+            /* #70 this ( display: none;)will remove box2 along with the space it was to take */
+
+            /* visibility: hidden; */
+            /* #71 this (visibility: hidden;) will only affect the visibility of the box2 and not the space it is suppose to occupy */
+            position: relative;
+            top: 5px;
+            z-index: 3;
+            /* #72 for a positioned box the 'z-index'property specifies the stacking order of the boxes . a box with a higher z-index value will be on top of a box with a lower z-index value */
+
+        }
+
+        #box3 {
+            background-color: blue;
+        }
+
+        #box4 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- #69 (div.box#box$*4)->this allow you create multiple boxes with same class and different id($sign adds 1,2,3...to the id) -->
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+
+</body>
+
+</html>

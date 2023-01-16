@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> em,rem,vh,vw</title>
+    <style>
+        html{
+            font-size: 5px;
+        }
+        .container {
+            font-size: 5px;
+            border: 2px solid black;
+            width: 30vw;
+            height: 40vh;
+            /* #86 30vw->will take 30% width of the viewport    
+                40vh->will take 40% height of the viewport  */
+
+        }
+
+        h1{
+            text-align: center;
+        }
+        #id1{
+            font-size: 4em;
+            padding: 2em;
+            /* #84 the font size will be 4 times the parent element . font size of id1 will be 40px and padding will be 80px (2 times the font size of id1) */
+        }
+        #id2{
+            font-size: 4rem;
+            padding: 2rem;
+            /* #85 the font size will be 4 times the root element(html) . font size of id1 will be 80px and padding will be 40px  */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="id1">first heading</h1>
+        <h1 id="id2">second heading</h1>
+        <h1 id="id3">third heading</h1>
+    </div>
+</body>
+
+</html>

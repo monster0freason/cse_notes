@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>allignment</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|fire-animation">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|neon">
+    <!-- #54 using this api i can add many font effect. -->
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .container{
+            border: 4px solid brown ;
+            width: 700px;
+            margin: 33px auto;
+            /* #53 this auto property moves the cointainer to the centre of the page. */
+            background-color: antiquewhite;
+
+        }
+        .item{
+            border: 4px solid red ;
+            background-color: pink;
+            padding: 10px;
+            margin: 10px;
+        }
+        #fruit{
+            float: left;
+            width: 47%;
+
+        }
+        #computer{
+            float: left;
+            width: 47%;
+        }
+        #staitionary{
+           clear: left;
+           /* #55 if this 'clear' is not used the floating elements will overlap the normal elements -> (clear: left;) is used to clear elements floating in left ; (clear: :right;) is used to clear elements floating in right ; (clear: both;) is used to clear elements floating in both left and right.50% ; */
+        }
+        p,h3{
+            text-align: justify;
+            /* #56 used to allign text in left right or centre. */
+        }
+        h1{
+            width: 350px;
+            margin: auto;
+            border: 2px solid purple;
+            margin-top: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="font-effect-neon">welcome to my store</h1>
+        <div id="fruit" class="item">
+            <h3 class="font-effect-fire-animation">fruits</h3>
+            <p id="fruitpara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo totam consectetur delectus, quaerat quibusdam ducimus cum officia quas sequi aliquam sint provident distinctio possimus similique assumenda! Quas, consectetur error. Iste! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem culpa eaque cum quasi similique voluptate vero perspiciatis asperiores id eligendi commodi facilis accusamus, ea nisi numquam quam illo a doloremque doloribus. Porro itaque eligendi nostrum!</p>
+        </div>
+        <div id="computer" class="item">
+            <h3 class="font-effect-fire-animation">computer</h3>
+            <p id="computerpara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo totam consectetur delectus, quaerat quibusdam ducimus cum officia quas sequi aliquam sint provident distinctio possimus similique assumenda! Quas, consectetur error. Iste! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptas itaque exercitationem recusandae, at est non mollitia ex voluptatum architecto perferendis accusamus accusantium et sunt odit. Ratione consectetur rerum ipsa tenetur dolor voluptas incidunt.</p>
+        </div>
+        <div id="staitionary" class="item">
+            <h3 class="font-effect-fire-animation">staitionary</h3>
+            <p id="staitinarypara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo totam consectetur delectus, quaerat quibusdam ducimus cum officia quas sequi aliquam sint provident distinctio possimus similique assumenda! Quas, consectetur error. Iste!</p>
+        </div>
+    </div>
+</body>
+</html>

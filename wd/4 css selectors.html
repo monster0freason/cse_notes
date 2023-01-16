@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selectors</title>
+    <link rel="stylesheet" href="1d.css">
+    <style>
+        h3{
+            color: red;
+        }
+        p{
+            color:blue;
+            border: 2px solid red;
+        }
+        /* #29 element selector */
+        #differentp{
+        color: chartreuse;
+        }
+        /* #30 id selector : if we want to target a different paragraph use id in that paragraph and in css selector should be '#idname' */
+        .newc{
+            color: cyan;
+        }
+        .newb{
+            background-color: black;
+        }
+        /* #31 class selector : if we want to select multiple paragraphs we can apply same class to all of them and in css selector should be '.idname' */
+        #para{
+            color:orange;
+            }
+        
+            span,footer{
+                background-color: plum;
+            } /* #32 grouping seletor: we can group different tags(here span and footer) */
+           
+    </style>
+</head>
+<body>
+   <h3 id="head">css selectors</h3> 
+   <p><b>#29 element selector</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+   <p id="differentp"> <b>#30 id selector : if we want to target a different paragraph use id in that paragraph and in css selector should be '#idname'</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+   <p class="newc"><b>#31 class selector : if we want to select multiple paragraphs we can apply same class to all of them and in css selector should be '.idname'</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+   <p class="newc newb">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+   <p id="para" class="newc"><b>#32 id take precidence over class</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+   <span> <b>#32 grouping seletor:</b> we can group different tags(here span and footer)</span>
+   <footer>Lorem ipsum dolor sit amet.</footer>
+</body>
+</html>

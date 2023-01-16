@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipulating dom(document object model)</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+            <li>item 6</li>
+
+        </ul>
+    </div>
+    <din class="container">
+        another container
+    </din>
+    <script>
+        let main=document.getElementById('main');
+        console.log(main)
+        // #135.1 using this we can access content of 'id=main' in the console.
+
+        let nav=document.getElementById('nav');
+        console.log(nav)
+        nav.innerHTML="<li>fuckyou</li>"
+        // #135.2 we can change the content of the element with id=nav by using ( nav.innerHTML="<li>fuckyou</li>")
+
+        let container=document.getElementsByClassName('container');
+        console.log(container);
+        console.log(container[1]);
+       
+        // #136 if we want to access elements by class . we will a collection(array) of elements with the same class ('container'). it is like an array , we can access any element using an index (container[1]).
+
+        let sel1=document.querySelector('#nav');
+        console.log(sel1);
+        let sel2=document.querySelector('.container');
+        console.log(sel2);
+        let sel3=document.querySelector('#nav>li');
+        console.log(sel3);
+        let sel4=document.querySelectorAll('#nav>li');
+        console.log(sel4);
+        // #137 we can access elements even by using css selectors.
+
+
+
+
+    </script>
+</body>
+</html>

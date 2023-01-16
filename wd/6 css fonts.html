@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css fonts</title>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Tangerine">
+
+    <style>
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* #34 web save font : fonts that are already installed in your pc. web font: fonts that we have to import from outside. */
+
+            /* #35 we can stack fonts : here it means if arial is not present use helvetica , if helvetica is also not present use sans-serif. */
+        }
+
+        #newp {
+            font-family: 'Tangerine', serif;
+            /* #36 you can get stylesheet of any web font on google font api and you can import the link in css sheet. */
+
+            font-size: 33px;
+            /* #37 pixel is the unit of font size. 1px=1/96 of an inch */
+
+            line-height: 4em;
+            /* #38 line height is distance between two inline boxes . 4em=4 times em(parent height). */
+
+            font-weight: bold;
+
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>css fonts</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    <p id="newp">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+
+</body>
+
+</html>
