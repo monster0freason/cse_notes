@@ -1,0 +1,79 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+  
+}
+
+body::before{
+    content: "" ;
+    height: 900px;
+    width: 100%;
+    top: 0px;
+    position: absolute;
+    z-index: -1;
+    background: url('/static/cross-fit-tire-lift.jpg') no-repeat center center ; 
+    background-size: cover;
+}
+
+nav{
+    background-color: black;
+    margin: 0px;
+    padding: 12px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    padding: 3px 17px;
+} 
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+h1{
+    text-align: center ;
+}
+
+.container{
+    
+    margin: 12px auto;
+    background-color: ;
+    max-width: 70%;
+}
+
+input,textarea{
+    opacity: 0.8;
+    display: block;
+    padding: 3px;
+    margin: 15px auto ;
+    width: 60%;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+/* #155.1 iwe can combine two tags in css if they have same properties */
+
+.btn{
+  margin: 4px auto;
+  display: block;
+  padding: 5px 12px;
+  background: grey;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid black;
+  border-radius: 5px; 
+  cursor: pointer;
+}

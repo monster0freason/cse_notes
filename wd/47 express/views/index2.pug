@@ -1,14 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>using plane html in pug</title>
+    <title>#{title}</title>
+    style
+        include ../static/style.css
+        <!-- #154.7 intentations are very important in pug. -->
+
+        <!-- #154.8 this is how we include a static file in pug. -->
+
+        <!-- #154.9 (../static/style.css) here the two dots mean we are asking it to go back a directory and then search for static/style.css. -->
 </head>
 <body>
-   <h1>this is heading</h1> 
-   <p>this is a plain html using pug</p> 
+    <nav>
+        <ul>
+            <li><a href="/"> home</a></li>
+            <li><a href="/"> about</a></li>
+            <li><a href="/"> contact us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>gym membership form</h1> 
+        <p>
+            |<!--   #{content} -->
+            |<!-- #153.5.2 the is how we use message and title in pug. -->
+            | <!-- #154.6 if we wanna mix plane text with inline tag we need to add a pipe character(|) for it to work -->
+        </p>
+
+        <form action="/index2" method="post" id="contact">
+            <input type="text" name="name2" id="name" placeholder="enter your name">
+            <input type="text" name="age" id="age" placeholder="enter your age">
+            <input type="text" name="gender" id="gender" placeholder="enter your gender">
+            <textarea name="address" id="address" cols="30" rows="10" placeholder="enter your address"></textarea>
+            <textarea name="more" id="more" cols="30" rows="10" placeholder="more about you"></textarea>
+            <button class="btn">submit</button>
+        </form>
+
+    </div>
+     
 </body>
 </html>

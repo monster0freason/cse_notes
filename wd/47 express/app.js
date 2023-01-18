@@ -5,7 +5,9 @@
 // #151.2 we are making this express folder as a node project(using npn init)
 
 const express=require('express');// #151.3.1 imported express
+const { SocketAddress } = require('net');
 const app=express();//#151.3.2 made an app using express
+const fs=require("fs");
 const port=80;
 
 app.get('/',(req,res)=>{
@@ -45,7 +47,7 @@ app.set('view engine','pug');
 // #153.2 set the views directory.and adding the path module
 const path=require("path");
 
-app.set('views',path.join(__dirname,'views'))
+app.set('views',path.join(__dirname,'/views'))
 
 // #153.4 our pug demo endpoint
 app.get('/demo', (req, res) => {
@@ -53,5 +55,35 @@ app.get('/demo', (req, res) => {
 })
 
   app.get('/index2',(req,res)=>{
-    res.status(200).render('index2.pug')
+    // #153.5.1 we store the title and content in a const variable(msg).
+    const con="this is the best content"
+    const msg={'title':'Hello','content':con}
+    res.status(200).render('index2',msg)
+  })
+
+  app.use(express.urlencoded({extended: true}))
+  // #156.1.1 this is a middleware which helps us to get the data to express
+
+  app.post('/index2',(req,res)=>{
+    // #153.5.1 we store the title and content in a const variable(msg).
+
+    //console.log(req.body)
+
+     // #156.1.2 this will show the submitted data in the console/terminal in the form of an object.
+
+    name2=req.body.name2
+    age=req.body.age
+    gender=req.body.gender
+    address=req.body.address
+    more=req.body.more
+    // #156.1.3 here we are using the names of input and textarea tags so that we can store the data in the variables(name2,age,gender,address,more)
+
+    let outputtowrite =`the name of the client is ${name2},${age} years old, ${gender} residing at ${address}.---> more about him/her:${more}`
+    // #156.2.1 we are storing all the info in this variable(outputtowrite).
+
+    fs.writeFileSync('output.txt',outputtowrite)
+    const msg={'message':'your form has beeb submitted successfully'}
+     // #156.2.2 we are storing all the info in output.text file. we are also sending a message.
+
+    res.status(200).render('index2.pug',msg)
   })
