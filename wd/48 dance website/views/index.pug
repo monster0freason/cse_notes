@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    style
+      include ../static/style.css
+  body
+    nav#navbar 
+        //- #157.1 this is how we include id and class for tags in html(nav#navbar.top).
+
+        //- #157.2 (// just some paragraphs)-->you can see HTML comments(<!-- just some paragraphs-->) in the rendered page.(//- will not output within markup)-->These are only for commenting on the Pug code itself, and do not appear in the rendered HTML.
+
+        ul 
+            div#logo
+                img(src='static/logo/pngwing.com.png')
+                |HDA 
+            li #[a(href="/") home ]
+            li #[a(href="/") about]
+            li #[a(href="/") services ]
+            li #[a(href="/") class info]
+            li #[a(href="/") contact us]
+            //- #157.3 we can add 'a' tag like this.
+
+    section#introforsection 
+        div#introtitle Welcome to kabir's Dance Academy!
+
+        div#intro  We are a premier dance studio that offers a wide range of classes and programs for dancers of all ages and skill levels. Whether you are a beginner looking to learn the basics of a new dance style, or an experienced dancer looking to perfect your technique, we have something for everyone. Our dedicated instructors are passionate about dance and committed to helping each and every student reach their full potential. Join us today and discover the joy and beauty of dance! 
+    section#ourmission 
+        h2 our mission
+        div.card
+            h3 Dance classes and lessons
+            div.card-box
+                div.card-img
+                    img(src="static/cards/pngwing.com.png") 
+
+                div.card-content
+                    p Dance classes and lessons are a great way to improve your coordination, flexibility, and overall fitness while having fun. Come and join us for an exciting and enjoyable dance experience!         
+
+        div.card
+            h3 Dance events and performances
+            div.card-box
+                div.card-img
+                    img(src="static/cards/pngwing2.com.png") 
+
+                div.card-content
+                    pOur events and performances showcase the talents and skills of our dancers and feature a wide variety of styles and music     
+
+        div.card
+            h3 Dance styles and trends
+            div.card-box
+                div.card-img
+                    img(src="static/cards/pngwing.com (1).png") 
+
+                div.card-content
+                    p Dance Styles: Offers a diverse range of dance styles, from classic to latest trends. Trends: Experienced instructors keep up with latest developments, constantly updating choreography.     
+
+    section#sponsorssection 
+        h2 our sponsors
+        #sponsors 
+            img(src="static/sponsors/pngwing.com (3).png",alt="sponsor image",class='spimg')
+
+            img(src="static/sponsors/pngwing.com (4).png",alt="sponsor image",class='spimg')
+
+            img(src="static/sponsors/pngwing.com (5).png",alt="sponsor image",class='spimg')
+
+            img(src="static/sponsors/pngwing.com (6).png",alt="sponsor image",class='spimg')
+
+    footer#footer 
+        h2 Copyright © 2022 kabirDanceAcademy.com | all rights reserved  
+    script
+      include ../static/index.js

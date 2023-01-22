@@ -63,7 +63,7 @@ input,textarea{
     border: 2px solid black;
     border-radius: 5px;
 }
-/* #155.1 iwe can combine two tags in css if they have same properties */
+/* #155.1 we can combine two tags in css if they have same properties */
 
 .btn{
   margin: 4px auto;

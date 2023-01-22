@@ -1,0 +1,23 @@
+//- 159.1 In Pug (formerly known as Jade), template inheritance allows you to build a base template that includes common elements, such as a header and footer, and then extend that template for specific pages. This allows you to avoid duplicating common code across multiple templates. The extends keyword is used to inherit from a parent template, and the block keyword is used to define areas that can be overridden in child templates.
+
+//- layout.pug
+doctype html
+html
+  head
+    title kabir dance academy
+    block scripts
+    block style
+  body
+    nav#navbar 
+        ul 
+            div#logo
+                img(src='static/logo/pngwing.com.png')
+                |HDA 
+            li #[a(href="/") home ]
+            li #[a(href="/") about]
+            li #[a(href="/") services ]
+            li #[a(href="/") class info]
+            li #[a(href="/contact") contact us]
+    block content
+    footer#footer 
+        h2 Copyright © 2022 kabirDanceAcademy.com | all rights reserved 
