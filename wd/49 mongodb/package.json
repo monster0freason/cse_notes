@@ -1,0 +1,14 @@
+{
+  "name": "49-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "49.1 inserting data into mongo database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kabir",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.8.4"
+  }
+}
