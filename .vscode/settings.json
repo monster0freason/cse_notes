@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "cstdlib": "cpp"
     },
     "java.project.sourcePaths": [
         "com.java",
