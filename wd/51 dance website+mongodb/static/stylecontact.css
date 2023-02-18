@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin: 12px 0;
+}
+
+.container{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: ;
+}
+.myform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.myinput{
+    width: 40%;
+    padding: 9px;
+    margin: 8px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn{
+    padding: 2px 3px;
+    margin: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: white;
+    background-color:black ;
+    cursor: pointer;
+}

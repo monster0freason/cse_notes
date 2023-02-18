@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "mapbox-gl": "^2.12.0"
   }
 }

@@ -33,6 +33,7 @@ async function main() {
 
   
   const silence = new Kitten({ name: 'tom' });
+  const elonm = new Kitten({ name: 'mars' });
    console.log(silence.name); 
    // #164.8 A model is a class with which we construct documents. In this case, each document will be a kitten with properties and behaviors as declared in our schema.(here silence ia an object)
    silence.speak();
@@ -40,7 +41,16 @@ async function main() {
 
    await silence.save();
    silence.speak();
-// #164.10 Each document can be saved to the database by calling its save method. The first argument to the callback will be an error if any occurred.
+   await elonm.save();
+   // #164.10 Each document can be saved to the database by calling its save method. The first argument to the callback will be an error if any occurred.
+
+   const kittens = await Kitten.find({name:'mars'});
+   console.log(kittens);
+   // #164.11 We can access all of the kitten documents through our Kitten model.
+
+
+
+
 
    
 
